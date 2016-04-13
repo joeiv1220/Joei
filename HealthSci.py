@@ -1,21 +1,16 @@
 import sys
-from Pain import pain
+from Minigames import pain
 
 
-print ' Introduction: "HIV (human immunodeficiency virus) is a virus that attacks\
- the immune system, the body\'s natural defense system. Without a strong\
- immune system, the body has trouble fighting off disease. Both the virus\
- and the infection it causes are called HIV. White blood cells are an important\
- part of the immune system."- Google\n\
- \n To win, successfully cure HIV with background knowledge and skill.\
+print ' Introduction: \n To win, successfully cure ? with background knowledge and skill.\
  Good luck.\n'
 
 node = None
 
 class HealthSciences:
-    def __init__(self, name, descript, f, b, r, l, yes, no):
+    def __init__(self, name, description, f, b, r, l, yes, no):
         self.name = name
-        self.descript = descript
+        self.description = description
         self.f = f
         self.b = b 
         self.r = r
@@ -25,36 +20,36 @@ class HealthSciences:
          
     def move(self, direction):
         global node
-        temp = globals()[getattr(self,direction)] 
-        if temp == pain:
+        woo = globals()[getattr(self,direction)] 
+        if woo == pain:
             pain()
         else:
-            node = temp
+            node = woo
  
-room0 = HealthSciences(':\n', None , 'room1', None, None, None, 'pain', None)  
-room1 = HealthSciences('hello:\n', None, None, None, None, None, None, None)
-room2 = HealthSciences(':\n', None, None, None, None, None, None, None)  
-room3 = HealthSciences(':\n', None, None, None, None, None, None, None)     
-room4 = HealthSciences(':\n', None, None, None, None, None, None, None)  
-room5 = HealthSciences(':\n', None, None, None, None, None, None, None) 
-room6 = HealthSciences(':\n', None, None, None, None, None, None, None) 
-room7 = HealthSciences(':\n', None, None, None, None, None, None, None)
-room8 = HealthSciences(':\n', None , None, None, None, None, None, None)  
-room9 = HealthSciences(':\n', None, None, None, None, None, None, None)  
-room10 = HealthSciences(':\n', None, None, None, None, None, None, None)  
-room11 = HealthSciences(':\n', None, None, None, None, None, None, None)     
-room12 = HealthSciences(':\n', None, None, None, None, None, None, None)  
-room13 = HealthSciences(':\n', None, None, None, None, None, None, None) 
-room14 = HealthSciences(':\n', None, None, None, None, None, None, None) 
-room15 = HealthSciences(':\n', None, None, None, None, None, None, None)
-room16 = HealthSciences(':\n', None , None, None, None, None, None, None)  
-room17 = HealthSciences(':\n', None, None, None, None, None, None, None)  
-room18 = HealthSciences(':\n', None, None, None, None, None, None, None)  
-room19 = HealthSciences(':\n', None, None, None, None, None, None, None)     
-room20 = HealthSciences(':\n', None, None, None, None, None, None, None)  
+room0 = HealthSciences(':\n',':\n',':\n', None , 'room1', None, None, None, 'pain', None)  
+room1 = HealthSciences(':\n',':\n',':\n', None, None, None, None, None, None)
+room2 = HealthSciences(':\n',':\n',':\n', None, None, None, None, None, None)  
+room3 = HealthSciences(':\n', ':\n',':\n',None, None, None, None, None, None)     
+room4 = HealthSciences(':\n',':\n',':\n', None, None, None, None, None, None)   
+room5 = HealthSciences 
+room6 = HealthSciences
+room7 = HealthSciences
+room8 = HealthSciences  
+room9 = HealthSciences
+room10 = HealthSciences  
+room11 = HealthSciences  
+room12 = HealthSciences  
+room13 = HealthSciences 
+room14 = HealthSciences
+room15 = HealthSciences
+room16 = HealthSciences
+room17 = HealthSciences
+room18 = HealthSciences 
+room19 = HealthSciences   
+room20 = HealthSciences
 room21 = HealthSciences(':\n', None, None, None, None, None, None, None) 
 room22 = HealthSciences(':\n', None, None, None, None, None, None, None) 
-room23 = HealthSciences(':\n', None, None, None, None, None, None, None)
+room23 = HealthSciences
 room24 = HealthSciences(':\n', None, None, None, None, None, None, None)  
 room25 = HealthSciences(':\n', None, None, None, None, None, None, None) 
 room26 = HealthSciences(':\n', None, None, None, None, None, None, None) 
@@ -85,13 +80,13 @@ room50 = HealthSciences(':\n', None, None, None, None, None, None, None)
 room51 = HealthSciences(':\n', None, None, None, None, None, None, None) 
 room52 = HealthSciences(':\n', None, None, None, None, None, None, None) 
 room53 = HealthSciences(':\n', None, None, None, None, None, None, None)
-room54 = HealthSciences(':\n', None, None, None, None, None, None, None)  
-room55 = HealthSciences(':\n', None, None, None, None, None, None, None) 
-room56 = HealthSciences(':\n', None, None, None, None, None, None, None) 
-room57 = HealthSciences(':\n', None, None, None, None, None, None, None)
-room58 = HealthSciences(':\n', None, None, None, None, None, None, None)  
-room59 = HealthSciences(':\n', None, None, None, None, None, None, None) 
-room60 = HealthSciences(':\n', None, None, None, None, None, None, None) 
+room54 = HealthSciences  
+room55 = HealthSciences
+room56 = HealthSciences 
+room57 = HealthSciences
+room58 = HealthSciences  
+room59 = HealthSciences
+room60 = HealthSciences 
 
 
 
