@@ -1,10 +1,11 @@
+
 def HotCrossBun():
     print "Objective: Teach a friend the how to play Hot Cross Bun on the trmupet.\n\
-You are in treble clef and the key signiture is in 4/4."
-import random  #Importing for later
+ You are in treble clef and the key signiture is in 4/4."
+import random
  
 #Setting up variables to be called on later
-life = 10
+life = 5
 bank = ["edc edc dddd cccc edc", "edc edc dddd cccc edc"]
 word = random.choice(bank)
  
@@ -18,7 +19,7 @@ wrong_answers = 0
 hidden_phrase = []
 foo = list(word) 
  
-print ("You currently have 10 chances.")
+print ("You currently have 5 chances.")
  
 while life > 0: 
      
