@@ -1,5 +1,5 @@
 import sys
-from Minigames import pain
+from jvminics10 import pain
 
 
 print ' Introduction: \n To win, successfully cure ? with background knowledge and skill.\

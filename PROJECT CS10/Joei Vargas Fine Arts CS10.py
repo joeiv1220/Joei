@@ -1,6 +1,6 @@
 import sys
 
-from JoeiVargasMinigamesCS10 import HotCrossBun
+from jvminics10 import hbc
 
 print 'Background:\n Mr. Robert M. Madrid is from the northern\
  San Joaquin Valley where he graduated from Tokay High School in\
@@ -40,12 +40,12 @@ class FineArts:
     def move(self, direction):
         global node
         woo = globals()[getattr(self,direction)] 
-        if woo == HotCrossBun:
-            HotCrossBun()
+        if woo == hbc:
+            hbc()
         else:
             node = woo
  
-room0 = FineArts(':\n',':\n',':\n', 'room1', None, None, None, 'HotCrossBun', None)  
+room0 = FineArts(':\n',':\n',':\n', 'room1', None, None, None, 'hbc', None)  
 room1 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
 room2 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)  
 room3 = FineArts(':\n', ':\n',':\n',None, None, None, None, None, None)     
