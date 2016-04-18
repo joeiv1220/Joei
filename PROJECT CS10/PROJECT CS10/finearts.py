@@ -45,8 +45,9 @@ class FineArts:
         else:
             node = woo
  
-room0 = FineArts(':\n',':\n',':\n', 'room1', None, None, None, 'hbc', None)  
-room1 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
+room0 = FineArts('Band Room:\n',':\n','An oboe would like to play your trumpet. What do you\
+ say?:\n', 'None', None, None, None, 'hbc', room1n)  
+room1n = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
 room2 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)  
 room3 = FineArts(':\n', ':\n',':\n',None, None, None, None, None, None)     
 room4 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)   
@@ -113,9 +114,9 @@ node = room0
 
 
 while True:
-    print 'options: name, description,  f(foward), b(backward), r(right),\
+    print 'options: name, description, dialogue, f(foward), b(backward), r(right),\
  l(left), yes, no\n'
-    print node.name, node.description
+    print node.name, node.dialogue
     command = raw_input()
     if command in ['q', 'exit', 'quit', 'ex']:
             sys.exit(0)
