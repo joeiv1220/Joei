@@ -35,20 +35,19 @@ choice = int(choice)
 
 
 #Take action as per selected menu-option #
-sys.argv = ['C:\\Users\\57bl\Documents\GitHub\Joei\Joei Vargas Fine Arts CS10.py',\
- 'C:\\Users\\57bl\Documents\GitHub\Joei Vargas Health Sciences CS10.py']
+sys.argv = ['', '', '']
 
 
 if choice == 1:
     print ("Fine Arts")
-    execfile('C:\\Users\\57bl\Documents\GitHub\Joei\Joei Vargas Fine Arts CS10.py')
+    execfile('')
     
-#elif choice == 2:
-  #  print ("Computer Science")
-  #  execfile('C:\\Users\\57bl\Dropbox\John Mauchly.py')
+elif choice == 2:
+    print ("Computer Science")
+    execfile(')
     
 elif choice == 3:
-    execfile('C:\\Users\\57bl\Documents\GitHub\Joei Vargas Health Sciences CS10.py')
+    execfile('')
     print ("Health Sciences")
 else:    ## default ##
         print ("Invalid number. Try again...")
