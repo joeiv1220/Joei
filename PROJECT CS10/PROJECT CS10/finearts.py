@@ -1,6 +1,6 @@
 import sys
 
-from jvminics10 import hbc
+from minigames import hbc
 
 print 'Background:\n Mr. Robert M. Madrid is from the northern\
  San Joaquin Valley where he graduated from Tokay High School in\
