@@ -14,10 +14,10 @@ if ' ' in word:
     letters_left.remove(' ') #removing the space if there is one
              
  
-user_guesses = [''] #More variables
-wrong_answers = 0
-hidden_phrase = []
-foo = list(word) 
+    user_guesses = [''] #More variables
+    wrong_answers = 0
+    hidden_phrase = []
+    foo = list(word) 
  
 print ("You currently have 5 chances.")
  
@@ -107,3 +107,10 @@ def pain():
                 print("My number was {}".format(random_number))
                 print("Bye.")
                 break
+
+
+#_____________________________________
+def x():
+    import random
+    randomnum = random.randint(1,10)
+    print randomnum

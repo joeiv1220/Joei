@@ -94,7 +94,7 @@ node = room0
 
 
 while True:
-    print 'options: name, description,  f(foward), b(backward), r(right),\
+    print 'options: name, description, dialougue, f(foward), b(backward), r(right),\
  l(left), yes, no\n'
     print node.name, node.description
     command = raw_input()
