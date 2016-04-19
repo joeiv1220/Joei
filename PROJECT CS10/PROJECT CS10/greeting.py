@@ -4,8 +4,6 @@ def Hello(greeting):
     name = raw_input("Hello, what's your name?")
     return greeting + name
 
-
-
 print Hello("Welcome,")
 print ("This game will allow you to choose an area of profession e.g. \
 (arts, education, computer science, government, health/sciences, law, and \
@@ -15,8 +13,6 @@ modifying the historical event that the category includes. Each historic event \
 simulation will include fictional and real humans in the real world. The \
 objective is to discover the reality of the historic event. You can either win \
 or lose depending your actions throughout the game.")
-
-
 
 # Show menu #
 print (25 * '-')
@@ -33,26 +29,21 @@ choice = raw_input('Enter your choice [1-3] : ')
 # Convert string to int type #
 choice = int(choice)
 
-
 #Take action as per selected menu-option #
-sys.argv = ['C:\\Users\\57bl\Documents\GitHub\Joei\Joei Vargas Fine Arts CS10.py',\
- 'C:\\Users\\57bl\Documents\GitHub\Joei Vargas Health Sciences CS10.py']
-
+sys.argv = ['C:\\Users\\57bl\Documents\GitHub\Joei\PROJECT CS10\PROJECT CS10\finearts.py', 'C:\\Users\\57bl\Documents\GitHub\Joei\PROJECT CS10\PROJECT CS10\healthsciences.py', 'C:\\Users\\57bl\Documents\GitHub\Joei\PROJECT CS10\PROJECT CS10\computerscience.py']
 
 if choice == 1:
     print ("Fine Arts")
-    execfile('C:\\Users\\57bl\Documents\GitHub\Joei\Joei Vargas Fine Arts CS10.py')
+    execfile('C:\\Users\\57bl\Documents\GitHub\Joei\PROJECT CS10\PROJECT CS10\finearts.py')
     
-#elif choice == 2:
-  #  print ("Computer Science")
-  #  execfile('C:\\Users\\57bl\Dropbox\John Mauchly.py')
+elif choice == 2:
+    print ("Computer Science")
+    execfile('C:\\Users\\57bl\Documents\GitHub\Joei\PROJECT CS10\PROJECT CS10\computerscience.py')
     
 elif choice == 3:
-    execfile('C:\\Users\\57bl\Documents\GitHub\Joei Vargas Health Sciences CS10.py')
+    execfile('C:\\Users\\57bl\Documents\GitHub\Joei\PROJECT CS10\PROJECT CS10\healthsciences.py')
     print ("Health Sciences")
 else:    ## default ##
         print ("Invalid number. Try again...")
-
 #whatbag 
-
 #friends

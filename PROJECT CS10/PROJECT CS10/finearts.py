@@ -1,6 +1,6 @@
 import sys
 
-from jvminics10 import hbc
+from minigames import hbc
 
 print 'Background:\n Mr. Robert M. Madrid is from the northern\
  San Joaquin Valley where he graduated from Tokay High School in\
@@ -45,27 +45,28 @@ class FineArts:
         else:
             node = woo
  
-room0 = FineArts(':\n',':\n',':\n', 'room1', None, None, None, 'hbc', None)  
-room1 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
+room0 = FineArts('Band Room:\n',':\n','An oboe would like to play your trumpet. What do you\
+ say?:\n', 'None', None, None, None, 'hbc', 'room1n')  
+room1n = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
 room2 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)  
 room3 = FineArts(':\n', ':\n',':\n',None, None, None, None, None, None)     
 room4 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)   
-room5 = FineArts (':\n',':\n',':\n', None, None, None, None, None, None)
-room6 = FineArts (':\n',':\n',':\n', None, None, None, None, None, None) 
-room7 = FineArts (':\n',':\n',':\n', None, None, None, None, None, None)
-room8 = FineArts  (':\n',':\n',':\n', None, None, None, None, None, None)
-room9 = FineArts (':\n',':\n',':\n', None, None, None, None, None, None)
-room10 = FineArts (':\n',':\n',':\n', None, None, None, None, None, None)
-room11 = FineArts (':\n',':\n',':\n', None, None, None, None, None, None)
-room12 = FineArts (':\n',':\n',':\n', None, None, None, None, None, None)
-room13 = FineArts (':\n',':\n',':\n', None, None, None, None, None, None)
-room14 = FineArts (':\n',':\n',':\n', None, None, None, None, None, None)
-room15 = FineArts (':\n',':\n',':\n', None, None, None, None, None, None)
-room16 = FineArts (':\n',':\n',':\n', None, None, None, None, None, None)
-room17 = FineArts (':\n',':\n',':\n', None, None, None, None, None, None) 
-room18 = FineArts (':\n',':\n',':\n', None, None, None, None, None, None)
-room19 = FineArts (':\n',':\n',':\n', None, None, None, None, None, None)
-room20 = FineArts (':\n',':\n',':\n', None, None, None, None, None, None)
+room5 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
+room6 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None) 
+room7 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
+room8 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
+room9 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
+room10 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
+room11 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
+room12 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
+room13 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
+room14 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
+room15 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
+room16 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
+room17 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None) 
+room18 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
+room19 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
+room20 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
 room21 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None) 
 room22 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None) 
 room23 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
@@ -83,7 +84,7 @@ room34 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
 room35 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None) 
 room36 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None) 
 room37 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
-room38 = FineArts (':\n',':\n',':\n', None, None, None, None, None, None)
+room38 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
 room39 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)  
 room40 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)  
 room41 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)     
@@ -91,7 +92,7 @@ room42 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
 room43 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None) 
 room44 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None) 
 room45 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
-room46 = FineArts (':\n',':\n',':\n', None, None, None, None, None, None)  
+room46 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)  
 room47 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)  
 room48 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)  
 room49 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)     
@@ -99,13 +100,13 @@ room50 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
 room51 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None) 
 room52 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None) 
 room53 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
-room54 = FineArts  (':\n',':\n',':\n', None, None, None, None, None, None)
-room55 = FineArts (':\n',':\n',':\n', None, None, None, None, None, None)
-room56 = FineArts (':\n',':\n',':\n', None, None, None, None, None, None)
-room57 = FineArts (':\n',':\n',':\n', None, None, None, None, None, None)
-room58 = FineArts (':\n',':\n',':\n', None, None, None, None, None, None) 
-room59 = FineArts (':\n',':\n',':\n', None, None, None, None, None, None) 
-room60 = FineArts (':\n',':\n',':\n', None, None, None, None, None, None)
+room54 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
+room55 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
+room56 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
+room57 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
+room58 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None) 
+room59 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None) 
+room60 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
 
 
 
@@ -113,9 +114,9 @@ node = room0
 
 
 while True:
-    print 'options: name, description,  f(foward), b(backward), r(right),\
+    print 'options: name, description, dialogue, f(foward), b(backward), r(right),\
  l(left), yes, no\n'
-    print node.name, node.description
+    print node.name, node.dialogue
     command = raw_input()
     if command in ['q', 'exit', 'quit', 'ex']:
             sys.exit(0)
