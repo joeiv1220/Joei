@@ -26,11 +26,12 @@ class computerscience:
         else:
             node = woo
  
-room0 = computerscience(':\n',':\n',':\n', 'room1', None, None, None, 'xy', None)  
-room1 = computerscience(':\n',':\n',':\n', None, None, None, None, None, None)
-room2 = computerscience(':\n',':\n',':\n', None, None, None, None, None, None)  
-room3 = computerscience(':\n', ':\n',':\n',None, None, None, None, None, None)     
-room4 = computerscience(':\n',':\n',':\n', None, None, None, None, None, None)   
+room0 = computerscience('Bedroom:\n',':\n','"GET UP MY CHILD!!!! IT\'S TIME TO\
+ CLEEEEEAAAAAANNNN!!!!!" Mom is up.\n', 'room1', None, None, None, 'xy', None)  
+room1 = computerscience('Stairs:\n',':\n',':\n', 'room2', None, None, None, None, None)
+room2 = computerscience('Attic:\n',':\n',':\n', 'room3', None, None, None, None, None)  
+room3 = computerscience(':\n', ':\n',':\n','room4', None, None, None, None, None)     
+room4 = computerscience(':\n',':\n',':\n', 'room5', None, None, None, None, None)   
 room5 = computerscience(':\n',':\n',':\n', None, None, None, None, None, None)
 room6 = computerscience(':\n',':\n',':\n', None, None, None, None, None, None) 
 room7 = computerscience(':\n',':\n',':\n', None, None, None, None, None, None)

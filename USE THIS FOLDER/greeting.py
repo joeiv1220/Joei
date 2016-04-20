@@ -30,18 +30,18 @@ choice = raw_input('Enter your choice [1-3] : ')
 choice = int(choice)
 
 #Take action as per selected menu-option #
-sys.argv = ['C:\\Users\\57bl\Documents\GitHub\Joei\PROJECT CS10\PROJECT CS10\\finearts.py', 'C:\\Users\\57bl\Documents\GitHub\Joei\PROJECT CS10\PROJECT CS10\healthsciences.py', 'C:\\Users\\57bl\Documents\GitHub\Joei\PROJECT CS10\PROJECT CS10\computerscience.py']
+sys.argv = ['', '', '']
 
 if choice == 1:
     print ("Fine Arts")
-    execfile('C:\\Users\\57bl\Documents\GitHub\Joei\PROJECT CS10\PROJECT CS10\\finearts.py')
+    execfile('')
     
 elif choice == 2:
     print ("Computer Science")
-    execfile('C:\\Users\\57bl\Documents\GitHub\Joei\PROJECT CS10\PROJECT CS10\computerscience.py')
+    execfile('')
     
 elif choice == 3:
-    execfile('C:\\Users\\57bl\Documents\GitHub\Joei\PROJECT CS10\PROJECT CS10\healthsciences.py')
+    execfile('')
     print ("Health Sciences")
 else:    ## default ##
         print ("Invalid number. Try again...")

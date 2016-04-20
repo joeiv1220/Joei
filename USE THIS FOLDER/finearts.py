@@ -26,9 +26,9 @@ print 'Background:\n Mr. Robert M. Madrid is from the northern\
 node = None
 
 class FineArts:
-    def __init__(self, name, description, dialogue, f, b, r, l, yes, no):
+    def __init__(self, name, location, dialogue, f, b, r, l, yes, no):
         self.name = name
-        self.description = description
+        self.location = location
         self.dialogue = dialogue
         self.f = f
         self.b = b 
@@ -45,15 +45,22 @@ class FineArts:
         else:
             node = woo
  
-room0 = FineArts('Band Room:\n',':\n','An oboe would like to play your trumpet. What do you\
- say?:\n', 'None', None, None, None, xy, 'room1n')   
-room1n = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
-room2 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)  
-room3 = FineArts(':\n', ':\n',':\n',None, None, None, None, None, None)     
-room4 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)   
-room5 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
-room6 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None) 
-room7 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
+room0 = FineArts('Band Room:\n','An oboe would like to play your trumpet. What\
+ do you say?:\n','"That\'s such a cool trumpet!! Can I play it?"\n', 'room1n', None,\
+ None, None, 'xy', 'room1n')   
+room1n = FineArts('Band Room:\n',':\n','"Haha maybe I\'ll give up oboe."\n',\
+ None, None, 'room2', None, None, None)
+room2 = FineArts('Office:\n',':\n','There\'s a substitute today. He\'s\
+ complaining."These kids are giving me a headache. I can\'t understand how\
+ their teacher does it."\n', None, None, None, 'room3', None, None)  
+room3 = FineArts('Small Room:\n', ':\n','Mr. Ticheli left some snacks for you.\
+ He knew you\'d become tired of running the class.\n', 'room4', None, None,\
+ None, None, None)     
+room4 = FineArts('Box of Snacks:\n',':\n','There\'s pretzels, Lay\'s and a\
+ somewhat cold soda.\n', 'room5', 'room5', 'room5', 'room5', 'room5', 'room5')   
+room5 = FineArts(':\n',':\n','\n', None, None, None, None, None, None)
+room6 = FineArts(':\n',':\n','\n', None, None, None, None, None, None) 
+room7 = FineArts(':\n',':\n','\n', None, None, None, None, None, None)
 room8 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
 room9 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
 room10 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
@@ -114,13 +121,13 @@ node = room0
 
 
 while True:
-    print 'options: name, description, dialogue, f(foward), b(backward), r(right),\
+    print 'options: name, location, dialogue, f(foward), b(backward), r(right),\
  l(left), yes, no\n'
     print node.name, node.dialogue
     command = raw_input()
     if command in ['q', 'exit', 'quit', 'ex']:
             sys.exit(0)
-    elif command in ['name','description', 'dialogue','f', 'b', 'r', 'l', 'yes', 'no']:
+    elif command in ['name','location','dialogue','f', 'b', 'r', 'l', 'yes', 'no']:
         try:
             node.move(command)
         except:
