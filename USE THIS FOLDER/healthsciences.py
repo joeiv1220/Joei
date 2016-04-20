@@ -27,12 +27,12 @@ class HealthSciences:
         else:
             node = woo
  
-room0 = HealthSciences(':\n',':\n','\n', 'room1', None, None, None, 'pain', None)  
-room1 = HealthSciences(':\n',':\n','\n', None, None, None, None, None, None)
-room2 = HealthSciences(':\n',':\n','\n', None, None, None, None, None, None)  
-room3 = HealthSciences(':\n', ':\n','\n',None, None, None, None, None, None)     
-room4 = HealthSciences(':\n',':\n','\n', None, None, None, None, None, None)   
-room5 = HealthSciences(':\n',':\n','\n', None, None, None, None, None, None)
+room0 = HealthSciences(':\n',':\n',':\n', 'room1', None, None, None, 'pain', None)  
+room1 = HealthSciences(':\n',':\n',':\n', None, None, None, None, None, None)
+room2 = HealthSciences(':\n',':\n',':\n', None, None, None, None, None, None)  
+room3 = HealthSciences(':\n', ':\n',':\n',None, None, None, None, None, None)     
+room4 = HealthSciences(':\n',':\n',':\n', None, None, None, None, None, None)   
+room5 = HealthSciences(':\n',':\n',':\n', None, None, None, None, None, None)
 room6 = HealthSciences(':\n',':\n',':\n', None, None, None, None, None, None) 
 room7 = HealthSciences(':\n',':\n',':\n', None, None, None, None, None, None)
 room8 = HealthSciences(':\n',':\n',':\n', None, None, None, None, None, None)
@@ -95,7 +95,7 @@ node = room0
 
 
 while True:
-    print 'options: name, description, dialogue, f(foward), b(backward), r(right),\
+    print 'options: name, description,  f(foward), b(backward), r(right),\
  l(left), yes, no\n'
     print node.name, node.description
     command = raw_input()

@@ -1,6 +1,6 @@
 import sys
 
-from minigames import hcb
+from minigames import xy
 
 print 'Background:\n Mr. Robert M. Madrid is from the northern\
  San Joaquin Valley where he graduated from Tokay High School in\
@@ -40,13 +40,13 @@ class FineArts:
     def move(self, direction):
         global node
         woo = globals()[getattr(self,direction)] 
-        if woo == hcb:
-            hcb()
+        if woo == xy:
+            xy()
         else:
             node = woo
  
 room0 = FineArts('Band Room:\n',':\n','An oboe would like to play your trumpet. What do you\
- say?:\n', 'None', None, None, None, 'hcb', 'room1n')   
+ say?:\n', 'None', None, None, None, xy, 'room1n')   
 room1n = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
 room2 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)  
 room3 = FineArts(':\n', ':\n',':\n',None, None, None, None, None, None)     

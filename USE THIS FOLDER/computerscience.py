@@ -1,6 +1,6 @@
 import sys
 
-from minigames import x
+from minigames import xy
 
 print 'Background:'
 
@@ -21,12 +21,12 @@ class computerscience:
     def move(self, direction):
         global node
         woo = globals()[getattr(self,direction)] 
-        if woo == x:
-            x()
+        if woo == xy:
+            xy()
         else:
             node = woo
  
-room0 = computerscience(':\n',':\n',':\n', 'room1', None, None, None, 'x', None)  
+room0 = computerscience(':\n',':\n',':\n', 'room1', None, None, None, 'xy', None)  
 room1 = computerscience(':\n',':\n',':\n', None, None, None, None, None, None)
 room2 = computerscience(':\n',':\n',':\n', None, None, None, None, None, None)  
 room3 = computerscience(':\n', ':\n',':\n',None, None, None, None, None, None)     
@@ -94,7 +94,7 @@ node = room0
 
 
 while True:
-    print 'options: name, description, dialougue, f(foward), b(backward), r(right),\
+    print 'options: name, description,  f(foward), b(backward), r(right),\
  l(left), yes, no\n'
     print node.name, node.description
     command = raw_input()
