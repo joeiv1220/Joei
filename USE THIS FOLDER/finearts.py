@@ -1,6 +1,7 @@
 import sys
+import random
 
-from minigames import xy
+from minigames import bun
 
 print 'Background:\n Mr. Robert M. Madrid is from the northern\
  San Joaquin Valley where he graduated from Tokay High School in\
@@ -24,6 +25,7 @@ print 'Background:\n Mr. Robert M. Madrid is from the northern\
  Use your outside knoweldge and most of all, A the P!\n'
 
 node = None
+room1n = None
 
 class FineArts:
     def __init__(self, name, location, dialogue, f, b, r, l, yes, no):
@@ -40,15 +42,19 @@ class FineArts:
     def move(self, direction):
         global node
         woo = globals()[getattr(self,direction)] 
-        if woo == xy:
-            xy()
+        if woo == bun:
+            bun()
+            node = room1y
         else:
             node = woo
  
 room0 = FineArts('Band Room:\n','An oboe would like to play your trumpet. What\
  do you say?:\n','"That\'s such a cool trumpet!! Can I play it?"\n', 'room1n', None,\
- None, None, 'xy', 'room1n')   
-room1n = FineArts('Band Room:\n',':\n','"Haha maybe I\'ll give up oboe."\n',\
+None, None, 'bun', 'room1n')   
+room1y = FineArts('Band Room:\n',':\n','"Haha maybe I\'ll give up oboe."\n',\
+ None, None, 'room2', None, None, None)
+room1n = FineArts('Band Room:\n',':\n','"I understand. Maybe I\'ll just switch\
+to trumpet!"\n',
  None, None, 'room2', None, None, None)
 room2 = FineArts('Office:\n',':\n','There\'s a substitute today. He\'s\
  complaining."These kids are giving me a headache. I can\'t understand how\
@@ -121,9 +127,9 @@ node = room0
 
 
 while True:
-    print 'options: name, location, dialogue, f(foward), b(backward), r(right),\
+    print '\n options: name, location, dialogue, f(foward), b(backward), r(right),\
  l(left), yes, no\n'
-    print node.name, node.dialogue
+    print node.name, node.location, node.dialogue
     command = raw_input()
     if command in ['q', 'exit', 'quit', 'ex']:
             sys.exit(0)
@@ -131,4 +137,4 @@ while True:
         try:
             node.move(command)
         except:
-            print 'Invalid option. Input a valid option.'
+           print 'Invalid option. Input a valid option.'
