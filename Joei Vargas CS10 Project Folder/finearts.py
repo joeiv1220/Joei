@@ -1,7 +1,7 @@
 import sys
 import random
 
-from minigames import bun
+from minigames import bun, chips
 
 print 'Background:\n Mr. Robert M. Madrid is from the northern\
  San Joaquin Valley where he graduated from Tokay High School in\
@@ -46,24 +46,19 @@ class FineArts:
             bun()
             node = room1y
         else:
+            node = woo 
+        if woo == chips:
+            chips()
+            node = room5
+        else:
             node = woo
  
-room0 = FineArts('Band Room:\n','An oboe would like to play your trumpet. What\
- do you say?:\n','"That\'s such a cool trumpet!! Can I play it?"\n', 'room1n', None,\
-None, None, 'bun', 'room1n')   
-room1y = FineArts('Band Room:\n',':\n','"Haha maybe I\'ll give up oboe."\n',\
- None, None, 'room2', None, None, None)
-room1n = FineArts('Band Room:\n',':\n','"I understand. Maybe I\'ll just switch\
-to trumpet!"\n',
- None, None, 'room2', None, None, None)
-room2 = FineArts('Office:\n',':\n','There\'s a substitute today. He\'s\
- complaining."These kids are giving me a headache. I can\'t understand how\
- their teacher does it."\n', None, None, None, 'room3', None, None)  
-room3 = FineArts('Small Room:\n', ':\n','Mr. Ticheli left some snacks for you.\
- He knew you\'d become tired of running the class.\n', 'room4', None, None,\
- None, None, None)     
-room4 = FineArts('Box of Snacks:\n',':\n','There\'s pretzels, Lay\'s and a\
- somewhat cold soda.\n', 'room5', 'room5', 'room5', 'room5', 'room5', 'room5')   
+room0 = FineArts('Band Room:\n','An oboe would like to play your trumpet. What do you say? To the right is the office.\n','"That\'s such a cool trumpet!! Can I play it?"\n', 'room1n', None, None, None, 'bun', 'room1n')   
+room1y = FineArts('Band Room:\n','Good job!\n','"Haha maybe I\'ll give up oboe."\n', None, None, 'room2', None, None, None)
+room1n = FineArts('Band Room:\n',':\n','"I understand. Maybe I\'ll just switch to trumpet!"\n', None, None, 'room2', None, None, None)
+room2 = FineArts('Office:\n','There\'s a substitute today. He\'s complaining.\n','"These kids are giving me a headache. I can\'t understand how their teacher does it."\n', None, None, None, 'room3', None, None)  
+room3 = FineArts('Storage Room:\n', 'Mr. Ticheli left some snacks for you. He knew you\'d become tired of running the class.\n','\n', 'room4', None, None, None, None, None)     
+room4 = FineArts('Box of Snacks:\n','There\'s pretzels, Lay\'s, and a somewhat cold soda.\n','\n', 'room5', 'room5', 'room5', 'room5', 'room5', 'room5')   
 room5 = FineArts(':\n',':\n','\n', None, None, None, None, None, None)
 room6 = FineArts(':\n',':\n','\n', None, None, None, None, None, None) 
 room7 = FineArts(':\n',':\n','\n', None, None, None, None, None, None)
@@ -127,7 +122,7 @@ node = room0
 
 
 while True:
-    print '\n options: name, location, dialogue, f(foward), b(backward), r(right),\
+    print '\noptions: name, location, dialogue, f(foward), b(backward), r(right),\
  l(left), yes, no\n'
     print node.name, node.location, node.dialogue
     command = raw_input()
