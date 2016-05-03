@@ -1,6 +1,6 @@
-#MINIGAMES
 import random
-def bun():
+
+def bundemo():
     print "Objective: Teach a friend the how to play Hot Cross Bun on the trmupet.\n\
     You are in treble clef and the key signiture is in 4/4."
     
@@ -115,7 +115,7 @@ def xy():
     print "hello"
     
 #_____________________________________
-def chips():
+def chipsdemo():
     import random
     random_number = random.randint(1,3)
     tries = 0

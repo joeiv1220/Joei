@@ -1,5 +1,6 @@
 import sys
-import random
+#import random
+import pickle
 
 from minigames import bun, chips
 
@@ -44,21 +45,20 @@ class FineArts:
         woo = globals()[getattr(self,direction)] 
         if woo == bun:
             bun()
-            node = room1y
-        else:
-            node = woo 
-        if woo == chips:
+            node = room1y 
+        elif woo == chips:
             chips()
             node = room5
         else:
             node = woo
- 
+        
+        
 room0 = FineArts('Band Room:\n','An oboe would like to play your trumpet. What do you say? To the right is the office.\n','"That\'s such a cool trumpet!! Can I play it?"\n', 'room1n', None, None, None, 'bun', 'room1n')   
 room1y = FineArts('Band Room:\n','Good job!\n','"Haha maybe I\'ll give up oboe."\n', None, None, 'room2', None, None, None)
-room1n = FineArts('Band Room:\n',':\n','"I understand. Maybe I\'ll just switch to trumpet!"\n', None, None, 'room2', None, None, None)
+room1n = FineArts('Band Room:\n','\n','"I understand. Maybe I\'ll just switch to trumpet!"\n', None, None, 'room2', None, None, None)
 room2 = FineArts('Office:\n','There\'s a substitute today. He\'s complaining.\n','"These kids are giving me a headache. I can\'t understand how their teacher does it."\n', None, None, None, 'room3', None, None)  
 room3 = FineArts('Storage Room:\n', 'Mr. Ticheli left some snacks for you. He knew you\'d become tired of running the class.\n','\n', 'room4', None, None, None, None, None)     
-room4 = FineArts('Box of Snacks:\n','There\'s pretzels, Lay\'s, and a somewhat cold soda.\n','\n', 'room5', 'room5', 'room5', 'room5', 'room5', 'room5')   
+room4 = FineArts('Box of Snacks:\n','There\'s pretzels, Lay\'s, and a somewhat cold soda.\n','\n', 'chips', 'chips', 'chips', 'chips', 'chips', 'chips')   
 room5 = FineArts(':\n',':\n','\n', None, None, None, None, None, None)
 room6 = FineArts(':\n',':\n','\n', None, None, None, None, None, None) 
 room7 = FineArts(':\n',':\n','\n', None, None, None, None, None, None)
@@ -120,16 +120,40 @@ room60 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
 
 node = room0
 
+def save():
+    global node, room1n
+    with open ('savegame.dat','wb') as f:
+        pickle.dump([node, room1n],f, protocol=2)
+    print "Game successfully saved."
+    
+def load():  
+    global node, room1n
+    with open('savegame.dat','rb') as f:
+        node, room1n = pickle.load(f)
+    print "Game successfully loaded."
 
 while True:
     print '\noptions: name, location, dialogue, f(foward), b(backward), r(right),\
- l(left), yes, no\n'
+ l(left), yes, no, save, load\n'
     print node.name, node.location, node.dialogue
-    command = raw_input()
+    command = raw_input().strip().lower()
     if command in ['q', 'exit', 'quit', 'ex']:
-            sys.exit(0)
+        sys.exit(0)
+    elif command in ["save"]:
+          save()
+    elif command in ["load"]:
+          load()
     elif command in ['name','location','dialogue','f', 'b', 'r', 'l', 'yes', 'no']:
         try:
             node.move(command)
         except:
            print 'Invalid option. Input a valid option.'
+           
+           
+    
+    if node == bun:
+        node = room1y
+          
+
+    
+    
