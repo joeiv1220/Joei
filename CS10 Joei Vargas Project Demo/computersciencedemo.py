@@ -37,7 +37,7 @@ room3 = computerscience('Underneath the Attic Entrance:\n', 'You are underneath\
  the attic. Would you like to enter?\n','\n',None, None, None, None, 'room4', 'room5')     
 room4 = computerscience('Ladder:\n','up....up.....up....\n','\n', 'room5', None, None, None, None, None)   
 room5 = computerscience('END:\n','Thank you for playing through my demo version of\
- The Fine Arts. For more information talk to me. I will also be raffling off\
+ Computer Science. For more information talk to me. I will also be raffling off\
  my cups.\n','\n', None, None, None, None, None, None)
 
 
