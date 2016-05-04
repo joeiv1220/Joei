@@ -40,15 +40,9 @@ room3 = HealthSciences('You Said What???:\n', 'Yikes.\n','"Now I want everyone t
  classmate." "Goodbye!" "Bye dude." "I\'ll make sure your parents know the real story! Don\'t worry!"\
  "Would you like to go as well, Jeanu?.. No? Of course not."\n','room5', 'room5', 'room5', 'room5', 'room5', 'room5')     
 room4 = HealthSciences('Post:\n', 'Okay. Nice.\n','"Well done."\n', 'room5', 'room5', 'room5', 'room5', 'room5', 'room5')   
-room5 = HealthSciences('End:\n', '\n',':\n', None, None, None, None, None, None)
-room6 = HealthSciences(':\n', '\n',':\n', None, None, None, None, None, None) 
-room7 = HealthSciences(':\n', '\n',':\n', None, None, None, None, None, None)
-room8 = HealthSciences(':\n', '\n',':\n', None, None, None, None, None, None)
-room9 = HealthSciences(':\n', '\n',':\n', None, None, None, None, None, None)
-room10 = HealthSciences(':\n', '\n',':\n', None, None, None, None, None, None)
-room11 = HealthSciences(':\n', '\n',':\n', None, None, None, None, None, None)
-room12 = HealthSciences(':\n', '\n',':\n', None, None, None, None, None, None)
-room13 = HealthSciences(':\n', '\n',':\n', None, None, None, None, None, None)
+room5 = HealthSciences('END:\n', 'Thank you for playing through my demo version of\
+ Health Sciences. For more information talk to me. I will also be raffling off\
+ my cups.\n',':\n', None, None, None, None, None, None)
 
 
 node = room0
