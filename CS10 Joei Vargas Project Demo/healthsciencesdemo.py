@@ -1,4 +1,4 @@
-import sys
+ import sys
 import pickle
 from minigames import pain
 
@@ -16,7 +16,7 @@ class HealthSciences:
         self.f = f
         self.b = b 
         self.r = r
-        self.l = l  
+        self.l = l   
         self.yes = yes
         self.no = no
          
@@ -25,23 +25,30 @@ class HealthSciences:
         woo = globals()[getattr(self,direction)] 
         if woo == pain:
             pain()
+            node = room4
         else:
             node = woo
  
-room0 = HealthSciences(':\n',':\n',':\n', 'room1', None, None, None, 'pain', None)  
-room1 = HealthSciences(':\n',':\n',':\n', None, None, None, None, None, None)
-room2 = HealthSciences(':\n',':\n',':\n', None, None, None, None, None, None)  
-room3 = HealthSciences(':\n', ':\n',':\n',None, None, None, None, None, None)     
-room4 = HealthSciences(':\n',':\n',':\n', None, None, None, None, None, None)   
-room5 = HealthSciences(':\n',':\n',':\n', None, None, None, None, None, None)
-room6 = HealthSciences(':\n',':\n',':\n', None, None, None, None, None, None) 
-room7 = HealthSciences(':\n',':\n',':\n', None, None, None, None, None, None)
-room8 = HealthSciences(':\n',':\n',':\n', None, None, None, None, None, None)
-room9 = HealthSciences(':\n',':\n',':\n', None, None, None, None, None, None)
-room10 = HealthSciences(':\n',':\n',':\n', None, None, None, None, None, None)
-room11 = HealthSciences(':\n',':\n',':\n', None, None, None, None, None, None)
-room12 = HealthSciences(':\n',':\n',':\n', None, None, None, None, None, None)
-room13 = HealthSciences(':\n',':\n',':\n', None, None, None, None, None, None)
+room0 = HealthSciences('Lab:\n', 'Professor Hill is becoming frustrated with the class. The sink\
+ is to the right.\n','"YOU ARE ALL STUPID!! SOMEONE GRAB ME SOME WATER!!!"\n', None , None, 'room1', None, None None)  
+room1 = HealthSciences('Sink:\n', 'Grab water?\n','"NOW!!!"\n', None, None, None, None, 'room2', 'room2n')
+room2 = HealthSciences('Water:\n', 'You have spilled the water.\n','"WAY TO GO DOCTOR SPILLY\
+ !!! NOW GET OVER HERE AND PARTICIPATE"\n', 'pain', 'pain', 'pain', 'pain', 'pain', 'room3')  
+room2n = HealthSciences('Water:\n', 'You are standing alone\n','"OHHHHHH DOCTORRRRRR!!!"\n', 'pain', 'pain', 'pain', 'pain'\
+ , 'pain', 'pain')  
+room3 = HealthSciences('You Said What???:\n', 'Yikes.\n','"Now I want everyone to say goodbye too our fellow\
+ classmate." "Goodbye!" "Bye dude." "I\'ll make sure your parents know the real story! Don\'t worry!"\
+ "Would you like to go as well, Jeanu?.. No? Of course not."\n','room5', 'room5', 'room5', 'room5', 'room5', 'room5')     
+room4 = HealthSciences('Post:\n', 'Okay. Nice.\n','"Well done."\n', 'room5', 'room5', 'room5', 'room5', 'room5', 'room5')   
+room5 = HealthSciences('End:\n', '\n',':\n', None, None, None, None, None, None)
+room6 = HealthSciences(':\n', '\n',':\n', None, None, None, None, None, None) 
+room7 = HealthSciences(':\n', '\n',':\n', None, None, None, None, None, None)
+room8 = HealthSciences(':\n', '\n',':\n', None, None, None, None, None, None)
+room9 = HealthSciences(':\n', '\n',':\n', None, None, None, None, None, None)
+room10 = HealthSciences(':\n', '\n',':\n', None, None, None, None, None, None)
+room11 = HealthSciences(':\n', '\n',':\n', None, None, None, None, None, None)
+room12 = HealthSciences(':\n', '\n',':\n', None, None, None, None, None, None)
+room13 = HealthSciences(':\n', '\n',':\n', None, None, None, None, None, None)
 
 
 node = room0
