@@ -5,7 +5,7 @@ from minigamesdemo import xy
 print 'Background: In your spare time, you passionitely research developments\
  of the tech world. Your goal is too..'
 
-node = None
+node = None 
 
 class computerscience:
     def __init__(self, name, location, dialogue, f, b, r, l, yes, no):

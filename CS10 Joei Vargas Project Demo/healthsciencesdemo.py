@@ -1,6 +1,6 @@
  import sys
 import pickle
-from minigames import pain
+from minigamesdemo import pain
 
 
 print ' Introduction: \n To win, successfully cure... with\

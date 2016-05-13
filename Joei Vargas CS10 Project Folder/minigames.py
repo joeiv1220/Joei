@@ -61,7 +61,7 @@ def bun():
 #Tell them if they are too high or too low if they guess wrong
 #Tell them how many guesses they have made
 
-def pain():
+'''def pain():
     import random
     random_number = random.randint(1,10)
     tries = 0
@@ -113,10 +113,11 @@ def pain():
 #_____________________________________
 def xy():
     print "hello"
-    
+    '''
 #_____________________________________
 def chips():
     import random
+    print ' Input 1, 2, or 3.'
     random_number = random.randint(1,3)
     tries = 0
     tries_remaining = 2
@@ -131,31 +132,31 @@ def chips():
             print("That's not a whole number! You suck!! ")
             break
         
-        if not guess_num > 0 or not guess_num < 11:
+        if not guess_num > 0 or not guess_num < 4:
             print("That number is not between 1 and 3. ")
             break
         
         
         elif guess_num == random_number:
             print("You\'re right!")
-            print("It took you {} tries. ".format(tries))
+            print("Good job. ({} number(s) inputed.) ".format(tries))
             break
         
         
         elif guess_num < random_number:
             if tries_remaining > 0:
-                print("That number is low. You have {} tries..".format(int(tries_remaining)))
+                print("That number is low. You have {} try..".format(int(tries_remaining)))
                 continue
             else:
                 print("I feel more like a {}".format(random_number))
-                print("I\'m leaving.")
+                print("")
                 break
         
         
         
         elif guess_num > random_number:
             if tries_remaining > 0:
-                print("That number is too high. You have {} more tries.".format(int(tries_remaining)))
+                print("That number is too high. You have {} more try.".format(int(tries_remaining)))
                 continue
             else:
                 print("My number was {}".format(random_number))
