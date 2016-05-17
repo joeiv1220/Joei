@@ -61,7 +61,7 @@ def bun():
 #Tell them if they are too high or too low if they guess wrong
 #Tell them how many guesses they have made
 
-'''def pain():
+def pain():
     import random
     random_number = random.randint(1,10)
     tries = 0
@@ -113,7 +113,17 @@ def bun():
 #_____________________________________
 def xy():
     print "hello"
-    '''
+    
+#_____________________________________
+def ab():
+    print "nice"
+    
+#_____________________________________
+
+def imdead():
+    print fml
+    
+
 #_____________________________________
 def chips():
     import random

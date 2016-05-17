@@ -2,7 +2,8 @@ import sys
 #import random
 import pickle
 
-from minigames import bun, chips
+from minigames import bun, chips, xy, ab, imdead
+
 
 print 'Background:\n Mr. Robert M. Madrid is from the northern\
  San Joaquin Valley where he graduated from Tokay High School in\
@@ -49,6 +50,9 @@ class FineArts:
         elif woo == chips:
             chips()
             node = room5
+        elif woo == xy:
+            xy()
+            node = room10y
         else:
             node = woo
         
@@ -58,25 +62,26 @@ room1y = FineArts('Band Room:\n','Good job!\n','"Haha maybe I\'ll give up oboe."
 room1n = FineArts('Band Room:\n','\n','"I understand. Maybe I\'ll just switch to trumpet!"\n', None, None, 'room2', None, None, None)
 room2 = FineArts('Office:\n','There\'s a substitute today. He\'s complaining.\n','"These kids are giving me a headache. I can\'t understand how their teacher does it."\n', None, None, None, 'room3', None, None)  
 room3 = FineArts('Storage Room:\n','Mr. Ticheli left some snacks for you. He knew you\'d become tired of running the class.\n','\n', 'room4', None, None, None, None, None)     
-room4 = FineArts('Box of Snacks:\n','There\'s pretzels, Lay\'s, and a somewhat cold soda.\n','\n', 'chips', 'chips', 'chips', 'chips', 'chips', 'chips')   
-room5 = FineArts('Storage Room:\n','\n','\n', None, None, None, None, None, None)
-room6 = FineArts(':\n','\n','\n', None, None, None, None, None, None) 
-room7 = FineArts(':\n','\n','\n', None, None, None, None, None, None)
-room8 = FineArts(':\n','\n','\n', None, None, None, None, None, None)
-room9 = FineArts(':\n','\n','\n', None, None, None, None, None, None)
-room10 = FineArts(':\n','\n','\n', None, None, None, None, None, None)
-room11 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
-room12 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
-room13 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
-room14 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
-room15 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
-room16 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
-room17 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None) 
-room18 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
-room19 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
-room20 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
-room21 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None) 
-room22 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None) 
+room4 = FineArts('Box of Snacks:\n','\n','There\'s pretzels, Lay\'s, and a somewhat cold soda. The expiration date for each reads 04/15/1997, 02/13/1998, and 11/15/1990. The soda "expires" in 10 days.. interesting.\n', 'chips', 'chips', 'chips', 'chips', 'chips', 'chips')   
+room5 = FineArts('Storage Room:\n','\n','\n', None, 'room6', None, None, None, None)
+room6 = FineArts('Office:\n','\n','\n', None, None, 'room7', None, None, None) 
+room7 = FineArts('Band Room:\n','\n','\n', None, None, None, 'room8', None, None)
+room8 = FineArts('Band Room:\n','You are in the pathway coming into the band room.\n','\n', None, None, 'room9', None, None, None)
+room9 = FineArts('Fridge:\n','\n','Open the fridge?\n', None, None, None, None, 'xy', 'room10n')
+room10y = FineArts('Clean Fridge:\n','\n','RRRRRRRRIIIIIIIINNNNNNNNGGGGGGGGGGGGGGGGGG Sub: "Class is dismissed." Mom wants you home early.You should get going.\n', 'room11', 'room11', 'room11', 'room11', 'room11', 'room11')
+room10n = FineArts('Fridge:\n','\n','RRRRRRRIIIIIIIINNNNNNNNGGGGGGGGGGGGGGGGGG Sub: "Class is dismissed." Mom wants you home early. You should get going.\n', 'room11', 'room11', 'room11', 'room11', 'room11', 'room11')
+room11 = FineArts('SAVE YOUR GAME\n','\n','\n', 'room12', 'room12', 'room12', 'room12', 'room12', 'room12')
+room12 = FineArts('Bedroom:\n','The majestic sunrise, possesses an orange glow seeping over the horizon. Powerful rays flood over the landscape lighting every blade of grass. \n','\n', 'room13', 'room13', 'room13', 'room13', 'room13', 'room13')
+room13 = FineArts('Bedroom:\n','\n','You can hear your mother\'s alarm clock going off. The radio plays Celine Dion\'s "My Heart Will Go On".\n', 'room14', 'room14', 'room14', 'room14', 'room14', 'room14')
+room14 = FineArts('Bedroom:\n','\n',':\n', None, None, None, None, None, None)
+room15 = FineArts(':\n','\n','\n', None, None, None, None, None, None)
+room16 = FineArts(':\n','\n','\n', None, None, None, None, None, None)
+room17 = FineArts(':\n','\n','\n', None, None, None, None, None, None) 
+room18 = FineArts(':\n','\n','\n', None, None, None, None, None, None)
+room19 = FineArts(':\n','\n','\n', None, None, None, None, None, None)
+room20 = FineArts(':\n','\n','\n', None, None, None, None, None, None)
+room21 = FineArts(':\n','\n','\n', None, None, None, None, None, None) 
+room22 = FineArts(':\n','\n',':\n', None, None, None, None, None, None) 
 room23 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
 room24 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)  
 room25 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None) 
