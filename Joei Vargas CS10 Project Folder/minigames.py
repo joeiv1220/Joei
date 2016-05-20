@@ -5,7 +5,7 @@ def bun():
     You are in treble clef and the key signiture is in 4/4."
     
  
-    #Setting up variables to be called on later
+    #Setting  up variables to be called on later
     life = 5
     bank = ["edc edc dddd cccc edc", "edc edc dddd cccc edc"]
     word = random.choice(bank)

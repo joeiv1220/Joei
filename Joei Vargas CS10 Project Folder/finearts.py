@@ -53,10 +53,13 @@ class FineArts:
         elif woo == xy:
             xy()
             node = room10y
+        elif woo == ab:
+            ab()
+            node = room26
         else:
             node = woo
         
-        
+         
 room0 = FineArts('Band Room:\n','An oboe would like to play your trumpet. What do you say? To the right is the office.\n','"That\'s such a cool trumpet!! Can I play it?"\n', 'bun', None, None, None, 'bun', 'room1n')   
 room1y = FineArts('Band Room:\n','Good job!\n','"Haha maybe I\'ll give up oboe."\n', None, None, 'room2', None, None, None)
 room1n = FineArts('Band Room:\n','\n','"I understand. Maybe I\'ll just switch to trumpet!"\n', None, None, 'room2', None, None, None)
@@ -72,20 +75,20 @@ room10y = FineArts('Clean Fridge:\n','\n','RRRRRRRRIIIIIIIINNNNNNNNGGGGGGGGGGGGG
 room10n = FineArts('Fridge:\n','\n','RRRRRRRIIIIIIIINNNNNNNNGGGGGGGGGGGGGGGGGG Sub: "Class is dismissed." Mom wants you home early. You should get going.\n', 'room11', 'room11', 'room11', 'room11', 'room11', 'room11')
 room11 = FineArts('SAVE YOUR GAME\n','\n','\n', 'room12', 'room12', 'room12', 'room12', 'room12', 'room12')
 room12 = FineArts('Bedroom:\n','The majestic sunrise, possesses an orange glow seeping over the horizon. Powerful rays flood over the landscape lighting every blade of grass. \n','\n', 'room13', 'room13', 'room13', 'room13', 'room13', 'room13')
-room13 = FineArts('Bedroom:\n','\n','You can hear your mother\'s alarm clock going off. The radio plays Celine Dion\'s "My Heart Will Go On".\n', 'room14', 'room14', 'room14', 'room14', 'room14', 'room14')
-room14 = FineArts('Bedroom:\n','\n',':\n', None, None, None, None, None, None)
-room15 = FineArts(':\n','\n','\n', None, None, None, None, None, None)
-room16 = FineArts(':\n','\n','\n', None, None, None, None, None, None)
-room17 = FineArts(':\n','\n','\n', None, None, None, None, None, None) 
-room18 = FineArts(':\n','\n','\n', None, None, None, None, None, None)
-room19 = FineArts(':\n','\n','\n', None, None, None, None, None, None)
-room20 = FineArts(':\n','\n','\n', None, None, None, None, None, None)
-room21 = FineArts(':\n','\n','\n', None, None, None, None, None, None) 
-room22 = FineArts(':\n','\n',':\n', None, None, None, None, None, None) 
-room23 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
-room24 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)  
-room25 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None) 
-room26 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None) 
+room13 = FineArts('Bedroom:\n','You are in bed.\n','You can hear your mother\'s alarm clock going off. The radio plays Celine Dion\'s "My Heart Will Go On". It is March 28th.\n', 'room14', 'room14', 'room14', 'room14', 'room14', 'room14')
+room14 = FineArts('Bedroom:\n','You are in bed.\n','\n', 'room15', None, None, None, None, None)
+room15 = FineArts('Bedroom:\n','You are out of bed.\n','\n', 'room16', None, None, None, None, None)
+room16 = FineArts('Bedroom:\n','You are standing up.\n','\n', None, None, 'room17', None, None, None)
+room17 = FineArts('Shelf:\n','It\'s dark. You can\'t see what\'s on the shelf.\n','\n', None, None, 'room18', None, None, None) 
+room18 = FineArts('Door\n','...\n','...\n', None, None, 'room19', None, None, None)
+room19 = FineArts('Wall:\n','You feel a lightswitch.\n','Would you like to turn the light on?\n', None, None, None, None, 'room20', None)
+room20 = FineArts('Lightswitch:\n','The light is on.\n','\n', None, 'room21', None, None, None, None)
+room21 = FineArts('Bedroom:\n','\n','You should go look at the shelf.\n', 'room22', None, None, None, None, None) 
+room22 = FineArts('Shelf:\n','There is a note.\n','Read it?\n', None, None, None, None, 'room23', None) 
+room23 = FineArts('Note:\n','\n','Hey Robbie, please pick up around the house before you go to school. I\'ll have dinner ready once you come home. Have a great day. Love, Mom.\n', None, 'room24', None, None, None, None)
+room24 = FineArts('Shelf:\n','...\n','...\n', None, None, None, 'room25', None, None)  
+room25 = FineArts('Clothes:\n','laundry basket\n','Get dressed.\n', 'ab', 'ab', 'ab', 'ab', 'ab', 'ab') 
+room26 = FineArts('Bedroom:\n','\n','Almost time for school. \n', None, None, None, None, None, None) 
 room27 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)
 room28 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None)  
 room29 = FineArts(':\n',':\n',':\n', None, None, None, None, None, None) 
