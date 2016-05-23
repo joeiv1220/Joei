@@ -1,5 +1,6 @@
 #MINIGAMES
 import random
+
 def bun():
     print "Objective: Teach a friend the how to play Hot Cross Bun on the trmupet.\n\
     You are in treble clef and the key signiture is in 4/4."
@@ -60,7 +61,7 @@ def bun():
 #It has to be a whole number from 1 to 10
 #Tell them if they are too high or too low if they guess wrong
 #Tell them how many guesses they have made
-
+'''
 def pain():
     import random
     random_number = random.randint(1,10)
@@ -108,12 +109,11 @@ def pain():
                 print("My number was {}".format(random_number))
                 print("Bye.")
                 break
-
+'''
 
 #_____________________________________
-def xy():
-    print "hello"
-    
+
+ 
 #_____________________________________
 def ab():
     print "nice"
@@ -121,7 +121,7 @@ def ab():
 #_____________________________________
 
 def imdead():
-    print fml
+    print "fml"
     
 
 #_____________________________________
@@ -169,7 +169,7 @@ def chips():
                 print("That number is too high. You have {} more try.".format(int(tries_remaining)))
                 continue
             else:
-                print("My number was {}".format(random_number))
-                print("Bye.")
+                print("Correct answer: {}".format(random_number))
+                print("Nevermind. I\'m not hungry.")
                 break
     

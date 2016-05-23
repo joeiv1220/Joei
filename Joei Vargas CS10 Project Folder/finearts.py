@@ -2,7 +2,7 @@ import sys
 #import random
 import pickle
 
-from minigames import bun, chips, xy, ab, imdead
+from minigames import bun, chips, tic, ab
 
 
 print 'Background:\n Mr. Robert M. Madrid is from the northern\
@@ -30,14 +30,14 @@ node = None
 room1n = None
 
 class FineArts:
-    def __init__(self, name, location, dialogue, f, b, r, l, yes, no):
+    def __init__(self, name, location, dialogue, n, s, e, w, yes, no):
         self.name = name
         self.location = location
         self.dialogue = dialogue
-        self.f = f
-        self.b = b 
-        self.r = r
-        self.l = l  
+        self.n = n
+        self.s = s 
+        self.e = e
+        self.w = w  
         self.yes = yes
         self.no = no
          
@@ -50,8 +50,8 @@ class FineArts:
         elif woo == chips:
             chips()
             node = room5
-        elif woo == xy:
-            xy()
+        elif woo == tic:
+            tic()
             node = room10y
         elif woo == ab:
             ab()
@@ -70,7 +70,7 @@ room5 = FineArts('Storage Room:\n','\n','\n', None, 'room6', None, None, None, N
 room6 = FineArts('Office:\n','\n','\n', None, None, 'room7', None, None, None) 
 room7 = FineArts('Band Room:\n','\n','\n', None, None, None, 'room8', None, None)
 room8 = FineArts('Band Room:\n','You are in the pathway coming into the band room.\n','\n', None, None, 'room9', None, None, None)
-room9 = FineArts('Fridge:\n','\n','Open the fridge?\n', None, None, None, None, 'xy', 'room10n')
+room9 = FineArts('Fridge:\n','\n','Open the fridge?\n', None, None, None, None, 'tic', 'room10n')
 room10y = FineArts('Clean Fridge:\n','\n','RRRRRRRRIIIIIIIINNNNNNNNGGGGGGGGGGGGGGGGGG Sub: "Class is dismissed." Mom wants you home early.You should get going.\n', 'room11', 'room11', 'room11', 'room11', 'room11', 'room11')
 room10n = FineArts('Fridge:\n','\n','RRRRRRRIIIIIIIINNNNNNNNGGGGGGGGGGGGGGGGGG Sub: "Class is dismissed." Mom wants you home early. You should get going.\n', 'room11', 'room11', 'room11', 'room11', 'room11', 'room11')
 room11 = FineArts('SAVE YOUR GAME\n','\n','\n', 'room12', 'room12', 'room12', 'room12', 'room12', 'room12')
@@ -141,8 +141,8 @@ def load():
     print "Game successfully loaded."
 
 while True:
-    print '\noptions: name, location, dialogue, f(foward), b(backward), r(right),\
- l(left), yes, no, save, load\n'
+    print '\noptions: name, location, dialogue, n(north), s(south), e(east), \
+w(west), yes, no, save, load\n'
     print node.name, node.location, node.dialogue
     command = raw_input().strip().lower()
     if command in ['q', 'exit', 'quit', 'ex']:
@@ -151,7 +151,7 @@ while True:
           save()
     elif command in ["load"]:
           load()
-    elif command in ['name','location','dialogue','f', 'b', 'r', 'l', 'yes', 'no']:
+    elif command in ['name','location','dialogue','n', 's', 'e', 'w', 'yes', 'no']:
         try:
             node.move(command)
         except:
