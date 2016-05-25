@@ -66,8 +66,8 @@ room1n = FineArts('Band Room:\n','\n','"I understand. Maybe I\'ll just switch to
 room2 = FineArts('Office:\n','There\'s a substitute today. He\'s complaining.\n','"These kids are giving me a headache. I can\'t understand how their teacher does it."\n', None, None, None, 'room3', None, None)  
 room3 = FineArts('Storage Room:\n','Mr. Ticheli left some snacks for you. He knew you\'d become tired of running the class.\n','\n', 'room4', None, None, None, None, None)     
 room4 = FineArts('Box of Snacks:\n','\n','There\'s pretzels, Lay\'s, and a somewhat cold soda. The expiration date for each reads 04/15/1997, 02/13/1998, and 11/15/1990. The soda "expires" in 10 days.. interesting.\n', 'chips', 'chips', 'chips', 'chips', 'chips', 'chips')   
-room5 = FineArts('Storage Room:\n','\n','\n', None, 'room6', None, None, None, None)
-room6 = FineArts('Office:\n','\n','\n', None, None, 'room7', None, None, None) 
+room5 = FineArts('Storage Room:\n','You are in the storage room.\n','\n', None, 'room6', None, None, None, None)
+room6 = FineArts('Office:\n','You are in the office.\n','\n', None, None, 'room7', None, None, None) 
 room7 = FineArts('Band Room:\n','\n','\n', None, None, None, 'room8', None, None)
 room8 = FineArts('Band Room:\n','You are in the pathway coming into the band room.\n','\n', None, None, 'room9', None, None, None)
 room9 = FineArts('Fridge:\n','\n','Open the fridge?\n', None, None, None, None, 'tic', 'room10n')
@@ -143,6 +143,10 @@ def load():
 while True:
     print '\noptions: name, location, dialogue, n(north), s(south), e(east), \
 w(west), yes, no, save, load\n'
+    print ' N '
+    print 'W E'
+    print ' S '
+  
     print node.name, node.location, node.dialogue
     command = raw_input().strip().lower()
     if command in ['q', 'exit', 'quit', 'ex']:
